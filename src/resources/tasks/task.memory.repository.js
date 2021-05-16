@@ -31,9 +31,9 @@ const unassignUserTasks = async userId => {
   userTasks.map(t => _.assign(t, { userId: null }));
 };
 
-const deleteTasksByBoard = async boardId => {
-  _.remove(db.Tasks, t => t.boardId === boardId);
-};
+const deleteTasksByBoard = async boardId => (
+  _.remove(db.Tasks, t => t.boardId === boardId)
+);
 
 module.exports = {
   getAll,

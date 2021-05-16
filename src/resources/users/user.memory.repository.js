@@ -21,8 +21,8 @@ const post = async postData => {
   return _.omit(user, 'password');
 };
 
-const userDelete = async id => {
-  _.remove(db.Users, e => e.id === id);
-};
+const userDelete = async id => (
+  _.remove(db.Users, e => e.id === id)
+);
 
 module.exports = { getAll, get, post, put, userDelete };
