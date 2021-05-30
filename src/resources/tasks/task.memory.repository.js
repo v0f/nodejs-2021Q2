@@ -46,8 +46,8 @@ const post = async postData => {
 /**
  * Delete task
  * @async
- * @param id {string} - board id
- * @return {Promise<string>} - deleted board id
+ * @param id {string} - task id
+ * @return {Promise<string>} - deleted task id
  */
 const taskDelete = async id => {
   const [deletedTask] = _.remove(db.Tasks, e => e.id === id);
