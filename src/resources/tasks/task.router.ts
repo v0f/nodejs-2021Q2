@@ -1,8 +1,10 @@
-const _ = require('lodash');
-const router = require('express').Router({ mergeParams: true });
-const tasksService = require('./task.service');
+import _ from 'lodash'
+import { Router } from 'express';
+import tasksService from './task.service'
 
-router.route('/').get(async (req, res) => {
+const router = Router({ mergeParams: true });
+
+router.route('/').get(async (_req, res) => {
   const tasks = await tasksService.getAll();
   res.json(tasks);
 });
@@ -38,4 +40,4 @@ router.route('/:tid').delete(async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;
