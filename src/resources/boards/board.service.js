@@ -16,7 +16,7 @@ const get = id => boardsRepo.get(id);
 
 /**
  * Create board
- * @param board
+ * @param postData
  * @return {Promise<Board>}
  * Return new board
  */
@@ -25,7 +25,7 @@ const post = postData => boardsRepo.post(postData);
 /**
  * Update board
  * @param {string} id - board id
- * @param board - board data
+ * @param putData - board data
  * @return {Promise<Board>}
  */
 const put = (id, putData) => boardsRepo.put(id, putData);
