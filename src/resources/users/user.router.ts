@@ -1,7 +1,9 @@
-const router = require('express').Router();
-const usersService = require('./user.service');
+import { Router } from 'express';
+import usersService from './user.service'
 
-router.route('/').get(async (req, res) => {
+const router = Router();
+
+router.route('/').get(async (_req, res) => {
   const users = await usersService.getAll();
   res.json(users);
 });
@@ -26,4 +28,4 @@ router.route('/:id').delete(async (req, res) => {
   res.json(req.params.id);
 });
 
-module.exports = router;
+export default router;

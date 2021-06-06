@@ -1,7 +1,9 @@
-const router = require('express').Router();
-const boardsService = require('./board.service');
+import { Router } from 'express';
+import boardsService from './board.service'
 
-router.route('/').get(async (req, res) => {
+const router = Router();
+
+router.route('/').get(async (_req, res) => {
   const boards = await boardsService.getAll();
   res.json(boards);
 });
@@ -34,4 +36,4 @@ router.route('/:id').delete(async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;
