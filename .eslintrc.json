@@ -12,6 +12,7 @@
   ],
   "parserOptions": {
     "sourceType": "module",
+    "project": "./tsconfig.json",
     "ecmaVersion": 2021,
     "ecmaFeatures": {
       "impliedStrict": true
@@ -43,6 +44,8 @@
       "allowModules": [],
       "resolvePaths": ["node_modules/"],
       "tryExtensions": [".js", ".json", ".node", ".ts", ".d.ts"]
-    }]
+    }],
+    "dot-notation": "off",
+    "@typescript-eslint/dot-notation": ["error"]
   }
 }
