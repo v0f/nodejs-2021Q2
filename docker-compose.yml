@@ -1,0 +1,38 @@
+version: "3"
+services:
+  node-app:
+    image: vof1111/node-app
+    build:
+      context: .
+      dockerfile: node.Dockerfile
+    depends_on:
+        - postgres
+    networks:
+      - app-net
+    ports:
+      - ${PORT}:${PORT}
+    environment:
+      - PORT=${PORT}
+    restart: always
+    init: true
+    volumes:
+      - /app/node_modules
+      - .:/app
+
+  postgres:
+    image: vof1111/postgres
+    build:
+      context: .
+      dockerfile: postgres.Dockerfile
+    networks:
+      - app-net
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD
+      - PGDATA
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+
+networks:
+  app-net:
+    driver: bridge
