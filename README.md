@@ -1,5 +1,11 @@
 # RS School REST service
 
+## Run application in Docker
+
+```
+docker-compose --env-file .env.example up
+```
+
 ## Prerequisites
 
 - Git - [Download & Install Git](https://git-scm.com/downloads).
