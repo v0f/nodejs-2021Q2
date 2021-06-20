@@ -1,4 +1,4 @@
-import tasksRepo from './task.memory.repository'
+import tasksRepo from './task.repository'
 import Task from './task.model';
 
 const getAll = (): Promise<Task[]> => tasksRepo.getAll();
