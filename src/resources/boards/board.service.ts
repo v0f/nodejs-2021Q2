@@ -1,5 +1,5 @@
-import boardsRepo from './board.memory.repository'
-import tasksRepo from '../tasks/task.memory.repository'
+import boardsRepo from './board.repository'
+import tasksRepo from '../tasks/task.repository'
 import Board from './board.model';
 
 const getAll = (): Promise<Board[]> => boardsRepo.getAll();

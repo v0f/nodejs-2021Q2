@@ -1,17 +1,16 @@
-import { v4 as uuid } from 'uuid'
+import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 
+@Entity()
 class Board {
-  id?: string
 
-  title?: string
+  @PrimaryGeneratedColumn("uuid")
+  id!: string
 
-  columns?: string[]
+  @Column()
+  title!: string
 
-  constructor({ id = uuid(), title = 'Board1', columns = [] as string[] } = {}) {
-    this.id = id;
-    this.title = title;
-    this.columns = columns;
-  }
+  @Column({ type: 'json', array: false, nullable: true })
+  columns!: string | null
 }
 
 export default Board;
