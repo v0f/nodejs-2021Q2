@@ -1,14 +1,14 @@
-import usersRepo from './user.memory.repository'
-import tasksRepo from '../tasks/task.memory.repository'
-import User from './user.model'
+import usersRepo from './user.repository'
+import tasksRepo from '../tasks/task.repository'
+import { User, UserProfile } from './user.model';
 
 const getAll = (): Promise<User[]> => usersRepo.getAll();
 
-const get = (id: string): Promise<User> => usersRepo.get(id);
+const get = (id: string): Promise<UserProfile> => usersRepo.get(id);
 
-const post = (postData: User): Promise<User> => usersRepo.post(postData);
+const post = (postData: User): Promise<UserProfile> => usersRepo.post(postData);
 
-const put = (id: string, putData: User): Promise<User> => usersRepo.put(id, putData);
+const put = (id: string, putData: User): Promise<UserProfile> => usersRepo.put(id, putData);
 
 const userDelete = async (id: string): Promise<void> => {
   await usersRepo.userDelete(id);
