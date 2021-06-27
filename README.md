@@ -14,7 +14,7 @@ npm start
 ```
 запуск тестов:
 ```
-npm test
+npm run test:auth
 ```
 ### 2. всё в докере
 ```
@@ -22,7 +22,7 @@ docker-compose --profile nodeInDocker up
 ```
 запуск тестов:
 ```
-docker-compose exec node-app npm test
+docker-compose exec node-app npm run test:auth
 ```
 
 ### Миграции

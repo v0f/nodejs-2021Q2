@@ -65,7 +65,9 @@
     "yamljs": "0.3.0"
   },
   "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
     "@types/express": "^4.17.12",
+    "@types/jsonwebtoken": "^8.5.3",
     "@types/lodash": "^4.14.170",
     "@types/morgan": "^1.9.2",
     "@types/node": "^15.6.1",
