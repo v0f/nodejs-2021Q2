@@ -1,38 +1,32 @@
-# RS School REST service
 
-## Запустить приложение можно 2 способами:
+## Installation
 
-### 1. БД в докере, node локально
-запуск базы:
-```
-docker-compose up
-```
-запуск приложения:
-```
-npm install
-npm start
-```
-запуск тестов:
-```
-npm run test:auth
-```
-### 2. всё в докере
-```
-docker-compose --profile nodeInDocker up
-```
-запуск тестов:
-```
-docker-compose exec node-app npm run test:auth
+```bash
+$ npm install
 ```
 
-### Миграции
-запускаются автоматически при старте приложения
+## Running the app
 
-запуск миграций вручную:
+```bash
+# development
+$ npm run start
+
+# watch mode
+$ npm run start:dev
+
+# production mode
+$ npm run start:prod
 ```
-npm run migration
-```
-генерация миграций:
-```
-npm run migration:gen -- -n init
+
+## Test
+
+```bash
+# unit tests
+$ npm run test
+
+# e2e tests
+$ npm run test:e2e
+
+# test coverage
+$ npm run test:cov
 ```
