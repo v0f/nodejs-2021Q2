@@ -36,3 +36,23 @@ npm run migration
 ```
 npm run migration:gen -- -n init
 ```
+
+### Результаты load testing
+
+#### Express
+|              |                                  |                                 |
+|--------------|----------------------------------|---------------------------------|
+| Requests     | [total, rate, throughput]        | 2855, 2855, 2855                |
+| Duration     | [min, max, median]               | 1.5, 52.9, 2.6                  |
+| Latencies    | [min, max, median, 95, 99]       | 0µs, 52µs, 1µs, 3µs, 6µs        |
+| Success      | [ratio]                          | 100.00%                         |
+| Status Codes | [code:count]                     | 200:2855                        |
+
+#### Fastify
+|              |                                  |                                 |
+|--------------|----------------------------------|---------------------------------|
+| Requests     | [total, rate, throughput]        | 2872, 2872, 2872                |
+| Duration     | [min, max, median]               | 1.3, 23, 2.1                    |
+| Latencies    | [min, max, median, 95, 99]       | 0µs, 22µs, 1µs, 2µs, 4µs        |
+| Success      | [ratio]                          | 100.00%                         |
+| Status Codes | [code:count]                     | 200:2872                        |
